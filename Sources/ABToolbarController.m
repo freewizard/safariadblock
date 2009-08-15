@@ -19,15 +19,15 @@
 	return YES;	
 }
 
-- (NSArray *)_toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar
+- (NSArray *)adblock_toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar
 {
-	return [[self _toolbarAllowedItemIdentifiers:toolbar] arrayByAddingObject:SafariAdBlockToolbarIdentifier];
+	return [[self adblock_toolbarAllowedItemIdentifiers:toolbar] arrayByAddingObject:SafariAdBlockToolbarIdentifier];
 }
 
-- (NSToolbarItem *)_toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag
+- (NSToolbarItem *)adblock_toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag
 {
 	if (![itemIdentifier isEqualToString:SafariAdBlockToolbarIdentifier])
-		return [self _toolbar:toolbar itemForItemIdentifier:itemIdentifier willBeInsertedIntoToolbar:flag];
+		return [self adblock_toolbar:toolbar itemForItemIdentifier:itemIdentifier willBeInsertedIntoToolbar:flag];
 	
 	NSButton *button = [[[NSButton alloc] initWithFrame:NSMakeRect(0.0, 0.0, 28.0, 22.0)] autorelease];
 	[button setButtonType:NSToggleButton];

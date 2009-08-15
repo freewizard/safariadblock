@@ -28,7 +28,7 @@
 	return [self overrideMethods:[NSArray arrayWithObject:@"webView:resource:willSendRequest:redirectResponse:fromDataSource:"]];
 }
 
-- (NSURLRequest *)_webView:(WebView *)sender resource:(id)identifier willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse fromDataSource:(WebDataSource *)dataSource
+- (NSURLRequest *)adblock_webView:(WebView *)sender resource:(id)identifier willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse fromDataSource:(WebDataSource *)dataSource
 {
 	if (
 		// If enabled 
@@ -62,7 +62,7 @@
 				}
 		}
 	}
-	return [self _webView:sender resource:identifier willSendRequest:request redirectResponse:redirectResponse fromDataSource:dataSource];
+	return [self adblock_webView:sender resource:identifier willSendRequest:request redirectResponse:redirectResponse fromDataSource:dataSource];
 }
 
 @end

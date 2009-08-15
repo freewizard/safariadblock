@@ -33,7 +33,7 @@
 	return [self overrideMethods:[NSArray arrayWithObject:@"webView:didFinishLoadForFrame:"]];
 }
 
-- (void)_webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
+- (void)adblock_webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:IsEnabledPrefsKey] && [[frame DOMDocument] documentElement]) {
 		
@@ -50,7 +50,7 @@
 																resolver:nil
 																	type:DOM_ANY_TYPE 
 																inResult:nil];
-				DOMElement *element;
+				DOMElement *element = nil;
 				while (element = (DOMElement *)[elements iterateNext]) {
 					if ([element respondsToSelector:@selector(src)]) {
 						NSString *src = [element src];
@@ -62,7 +62,7 @@
 			}
 		}
 	}
-	[self _webView:sender didFinishLoadForFrame:frame];
+	[self adblock_webView:sender didFinishLoadForFrame:frame];
 }
 
 @end

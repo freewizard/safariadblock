@@ -181,7 +181,7 @@ OSStatus rmSafariAdBlock() {
 + (BOOL)overrideMethod:(NSString *)methodName
 {
 	return [self swizzleMethod:NSSelectorFromString(methodName)
-					withMethod:NSSelectorFromString([@"_" stringByAppendingString:methodName])];
+					withMethod:NSSelectorFromString([@"adblock_" stringByAppendingString:methodName])];
 }
 
 + (BOOL)overrideMethods:(NSArray *)methods
