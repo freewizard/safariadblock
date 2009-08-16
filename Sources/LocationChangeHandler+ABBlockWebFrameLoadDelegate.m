@@ -36,29 +36,36 @@
 - (void)adblock_webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:IsEnabledPrefsKey] && [[frame DOMDocument] documentElement]) {
-		
+	
 		// If page is not whitelisted
 		if (![[sender mainFrameURL] _isMatchedByAnyRegexInArray:[[[ABController sharedController] filters] objectForKey:PageWhiteListFiltersKey]]) {
 			
 			NSArray *whiteList = [[[ABController sharedController] filters] objectForKey:WhiteListFiltersKey];
 			NSArray *blockList = [[[ABController sharedController] filters] objectForKey:BlockListFiltersKey];
 			NSArray *types = [NSArray arrayWithObjects:@"img", @"embed", @"iframe", nil];
-			
+            
 			for (NSString *type in types) {
-				DOMXPathResult* elements = [[frame DOMDocument] evaluate:[@"//" stringByAppendingString:type]
-															 contextNode:[[frame DOMDocument] documentElement]
-																resolver:nil
-																	type:DOM_ANY_TYPE 
-																inResult:nil];
-				DOMElement *element = nil;
-				while (element = (DOMElement *)[elements iterateNext]) {
-					if ([element respondsToSelector:@selector(src)]) {
-						NSString *src = [element src];
-						if (![src _isMatchedByAnyRegexInArray:whiteList])
-							if ([src _isMatchedByAnyRegexInArray:blockList])
-								[element setAttribute:@"style" value:@"display: none;"];
-					}
-				}
+                @try {
+                    DOMXPathResult* elements = [[frame DOMDocument] evaluate:[@"//" stringByAppendingString:type]
+                                                                 contextNode:[[frame DOMDocument] documentElement]
+                                                                    resolver:nil
+                                                                        type:DOM_UNORDERED_NODE_SNAPSHOT_TYPE
+                                                                    inResult:nil];
+                    DOMElement *element = nil;
+                    unsigned i, len = elements.snapshotLength;
+                    for (i = 0; i < len; ++i) {
+                        element = (DOMElement *)[elements snapshotItem:i];
+                        if ([element respondsToSelector:@selector(src)]) {
+                            NSString *src = [element src];
+                            if (![src _isMatchedByAnyRegexInArray:whiteList])
+                                if ([src _isMatchedByAnyRegexInArray:blockList])
+                                    [element setAttribute:@"style" value:@"visibility: hidden;"];
+                        }
+                    }
+                }
+                @catch (NSException *e) {
+                    NSLog(@"Safari AdBlock: exception %@ in adblock_webView:didFinishLoadForFrame:", e);
+                }
 			}
 		}
 	}
