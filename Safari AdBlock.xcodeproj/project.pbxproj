@@ -597,7 +597,7 @@
 				ARCHS = "$(NATIVE_ARCH)";
 				BUNDLE_LOADER = /Applications/Safari.app/Contents/MacOS/Safari;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = "0.4.0 RC2";
+				CURRENT_PROJECT_VERSION = "0.4.0 RC3";
 				DSTROOT = "$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -631,7 +631,7 @@
 					i386,
 				);
 				BUNDLE_LOADER = /Applications/Safari.app/Contents/MacOS/Safari;
-				CURRENT_PROJECT_VERSION = "0.4.0 RC2";
+				CURRENT_PROJECT_VERSION = "0.4.0 RC3";
 				DSTROOT = "$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
