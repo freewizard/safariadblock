@@ -17,7 +17,7 @@
 
 #import "ABController.h"
 #import "Constants.h"
-#import "ABPreferences.h"
+#import "SABPreferences.h"
 #import "Safari.h"
 #import "NSString+ABString.h"
 #import "NSArray+ABArray.h"
@@ -145,7 +145,7 @@ static ABController *sharedController = nil;
 		[ToolbarController swizzle];
 		
 		// poseAsClass is depreciated, but... who cares if it works here?
-		[[ABPreferences class] poseAsClass:[NSPreferences class]];
+		[[SABPreferences class] poseAsClass:[NSPreferences class]];
 		
 		
 	}

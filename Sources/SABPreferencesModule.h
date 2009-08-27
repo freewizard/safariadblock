@@ -20,7 +20,7 @@
 #import "ABController.h"
 #import "ABRuleEditorDelegate.h"
 
-@interface ABPreferencesModule : NSPreferencesModule <NSPreferencesModule> {
+@interface SABPreferencesModule : NSPreferencesModule <NSPreferencesModule> {
 	ABController *sharedController;
 	IBOutlet NSArrayController *subscriptionsController, *customFiltersController;
 	IBOutlet NSTableView *subscriptionsTable, *customFiltersTable;

@@ -15,21 +15,21 @@
  along with Safari AdBlock.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "ABPreferencesModule.h"
+#import "SABPreferencesModule.h"
 #import "ABValueTransformers.h"
 #import "Constants.h"
 #import "ABController.h"
 #import "ABHelper.h"
 #import <RegexKit/RegexKit.h>
 
-@implementation ABPreferencesModule
+@implementation SABPreferencesModule
 @synthesize versionLabel, URLTesterResults;
 
 #pragma mark -
 #pragma mark NSPreferencesModule
 
 - (NSString *)preferencesNibName {
-	return @"ABPreferences";
+	return @"SABPreferences";
 }
  
 - (NSView*)viewForPreferenceNamed:(NSString *)aName

@@ -15,9 +15,22 @@
  along with Safari AdBlock.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import <Cocoa/Cocoa.h>
-#import "NSPreferences.h"
+#import "SABPreferences.h"
+#import "SABPreferencesModule.h"
+#import <WebKit/WebKit.h>
 
-@interface ABPreferences : NSPreferences {
+@implementation SABPreferences
+
++ (id)sharedPreferences {
+	static BOOL	preferencesAdded = NO;
+	id preferences = [super sharedPreferences];
+	
+	if (preferences != nil && !preferencesAdded) {
+		[preferences addPreferenceNamed:@"AdBlock" owner:[SABPreferencesModule sharedInstance]];
+		preferencesAdded = YES;
+	}
+
+	return preferences;
 }
+
 @end

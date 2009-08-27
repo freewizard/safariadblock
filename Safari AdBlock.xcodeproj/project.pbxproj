@@ -28,8 +28,8 @@
 		5B29612F0D6AD82100C6F7AE /* ABButtonBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B699F5F0D2CE6C000E7E2D2 /* ABButtonBarButton.m */; };
 		5B2961300D6AD82100C6F7AE /* ABController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F3560CD2613100FA4A3C /* ABController.m */; };
 		5B2961310D6AD82100C6F7AE /* ABHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B522A380CFDE2890051F6C3 /* ABHelper.m */; };
-		5B2961320D6AD82100C6F7AE /* ABPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3D6520CD1F5CF00DBD48A /* ABPreferences.m */; };
-		5B2961330D6AD82100C6F7AE /* ABPreferencesModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3D66D0CD1F6AB00DBD48A /* ABPreferencesModule.m */; };
+		5B2961320D6AD82100C6F7AE /* SABPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3D6520CD1F5CF00DBD48A /* SABPreferences.m */; };
+		5B2961330D6AD82100C6F7AE /* SABPreferencesModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3D66D0CD1F6AB00DBD48A /* SABPreferencesModule.m */; };
 		5B2961340D6AD82100C6F7AE /* ABRuleEditorDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9AE400D3B82A100B87DDB /* ABRuleEditorDelegate.m */; };
 		5B2961350D6AD82100C6F7AE /* ABSubscriptionEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B22A31A0D47CABD00AAA561 /* ABSubscriptionEditorController.m */; };
 		5B2961370D6AD82100C6F7AE /* ABToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB555500D50AE6600295A82 /* ABToolbarController.m */; };
@@ -47,7 +47,7 @@
 		5B2961440D6AD82F00C6F7AE /* Action.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5B9A8EE40CE3725700E0231E /* Action.tiff */; };
 		5B2961450D6AD82F00C6F7AE /* ButtonBarBackground.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5B9A8F180CE3801100E0231E /* ButtonBarBackground.tiff */; };
 		5B2961460D6AD82F00C6F7AE /* Subscriptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8CAC080CFF699E00AE570B /* Subscriptions.plist */; };
-		5B2961470D6AD82F00C6F7AE /* ABPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 5B699F720D2CE7DC00E7E2D2 /* ABPreferences.nib */; };
+		5B2961470D6AD82F00C6F7AE /* SABPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 5B699F720D2CE7DC00E7E2D2 /* SABPreferences.nib */; };
 		5B2961480D6AD82F00C6F7AE /* ButtonBarButton.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 5BB98A7C0D368B3400550C12 /* ButtonBarButton.tiff */; };
 		5B2961490D6AD82F00C6F7AE /* Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B22A2FB0D47C70300AAA561 /* Cross.png */; };
 		5B29614A0D6AD82F00C6F7AE /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B22A2FC0D47C70300AAA561 /* Check.png */; };
@@ -152,7 +152,7 @@
 		5B6513070F6519900043B788 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Installer/dsa_pub.pem; sourceTree = "<group>"; };
 		5B699F5E0D2CE6C000E7E2D2 /* ABButtonBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABButtonBarButton.h; path = Sources/ABButtonBarButton.h; sourceTree = "<group>"; };
 		5B699F5F0D2CE6C000E7E2D2 /* ABButtonBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABButtonBarButton.m; path = Sources/ABButtonBarButton.m; sourceTree = "<group>"; };
-		5B699F720D2CE7DC00E7E2D2 /* ABPreferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ABPreferences.nib; path = Resources/ABPreferences.nib; sourceTree = "<group>"; };
+		5B699F720D2CE7DC00E7E2D2 /* SABPreferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = SABPreferences.nib; path = Resources/SABPreferences.nib; sourceTree = "<group>"; };
 		5B7F07710CF72728008FD15C /* NSString+ABString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ABString.h"; path = "Sources/NSString+ABString.h"; sourceTree = "<group>"; };
 		5B7F07720CF72728008FD15C /* NSString+ABString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ABString.m"; path = "Sources/NSString+ABString.m"; sourceTree = "<group>"; };
 		5B8CAC080CFF699E00AE570B /* Subscriptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Subscriptions.plist; path = Resources/Subscriptions.plist; sourceTree = "<group>"; };
@@ -169,11 +169,11 @@
 		5B9A8F180CE3801100E0231E /* ButtonBarBackground.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = ButtonBarBackground.tiff; path = Resources/ButtonBarBackground.tiff; sourceTree = "<group>"; };
 		5BA3D5550CD1EFA200DBD48A /* Safari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Safari.h; path = Sources/Safari.h; sourceTree = "<group>"; };
 		5BA3D5F90CD1EFF100DBD48A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
-		5BA3D6510CD1F5CF00DBD48A /* ABPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABPreferences.h; path = Sources/ABPreferences.h; sourceTree = "<group>"; };
-		5BA3D6520CD1F5CF00DBD48A /* ABPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABPreferences.m; path = Sources/ABPreferences.m; sourceTree = "<group>"; };
+		5BA3D6510CD1F5CF00DBD48A /* SABPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SABPreferences.h; path = Sources/SABPreferences.h; sourceTree = "<group>"; };
+		5BA3D6520CD1F5CF00DBD48A /* SABPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SABPreferences.m; path = Sources/SABPreferences.m; sourceTree = "<group>"; };
 		5BA3D6540CD1F60800DBD48A /* NSPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSPreferences.h; path = Sources/NSPreferences.h; sourceTree = "<group>"; };
-		5BA3D66C0CD1F6AB00DBD48A /* ABPreferencesModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABPreferencesModule.h; path = Sources/ABPreferencesModule.h; sourceTree = "<group>"; };
-		5BA3D66D0CD1F6AB00DBD48A /* ABPreferencesModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABPreferencesModule.m; path = Sources/ABPreferencesModule.m; sourceTree = "<group>"; };
+		5BA3D66C0CD1F6AB00DBD48A /* SABPreferencesModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SABPreferencesModule.h; path = Sources/SABPreferencesModule.h; sourceTree = "<group>"; };
+		5BA3D66D0CD1F6AB00DBD48A /* SABPreferencesModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SABPreferencesModule.m; path = Sources/SABPreferencesModule.m; sourceTree = "<group>"; };
 		5BB4EF340DEBE80300CF9941 /* ToolbarOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ToolbarOn.png; path = Resources/ToolbarOn.png; sourceTree = "<group>"; };
 		5BB4EF370DEBE89D00CF9941 /* ToolbarOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ToolbarOff.png; path = Resources/ToolbarOff.png; sourceTree = "<group>"; };
 		5BB5554F0D50AE6600295A82 /* ABToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABToolbarController.h; path = Sources/ABToolbarController.h; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				5B287BC70D0357FF00FD360A /* Credits.rtf */,
-				5B699F720D2CE7DC00E7E2D2 /* ABPreferences.nib */,
+				5B699F720D2CE7DC00E7E2D2 /* SABPreferences.nib */,
 				5B287CC80D04BCE600FD360A /* ABButtonBarTest.xib */,
 				5B01F32A0CD25F4700FA4A3C /* Defaults.plist */,
 				5B6513070F6519900043B788 /* dsa_pub.pem */,
@@ -268,10 +268,10 @@
 				5B01F3560CD2613100FA4A3C /* ABController.m */,
 				5B522A370CFDE2890051F6C3 /* ABHelper.h */,
 				5B522A380CFDE2890051F6C3 /* ABHelper.m */,
-				5BA3D6510CD1F5CF00DBD48A /* ABPreferences.h */,
-				5BA3D6520CD1F5CF00DBD48A /* ABPreferences.m */,
-				5BA3D66C0CD1F6AB00DBD48A /* ABPreferencesModule.h */,
-				5BA3D66D0CD1F6AB00DBD48A /* ABPreferencesModule.m */,
+				5BA3D6510CD1F5CF00DBD48A /* SABPreferences.h */,
+				5BA3D6520CD1F5CF00DBD48A /* SABPreferences.m */,
+				5BA3D66C0CD1F6AB00DBD48A /* SABPreferencesModule.h */,
+				5BA3D66D0CD1F6AB00DBD48A /* SABPreferencesModule.m */,
 				5BF9AE410D3B82A100B87DDB /* ABRuleEditorDelegate.h */,
 				5BF9AE400D3B82A100B87DDB /* ABRuleEditorDelegate.m */,
 				5B22A3190D47CABD00AAA561 /* ABSubscriptionEditorController.h */,
@@ -438,7 +438,7 @@
 				5B2961440D6AD82F00C6F7AE /* Action.tiff in Resources */,
 				5B2961450D6AD82F00C6F7AE /* ButtonBarBackground.tiff in Resources */,
 				5B2961460D6AD82F00C6F7AE /* Subscriptions.plist in Resources */,
-				5B2961470D6AD82F00C6F7AE /* ABPreferences.nib in Resources */,
+				5B2961470D6AD82F00C6F7AE /* SABPreferences.nib in Resources */,
 				5B2961480D6AD82F00C6F7AE /* ButtonBarButton.tiff in Resources */,
 				5B2961490D6AD82F00C6F7AE /* Cross.png in Resources */,
 				5B29614A0D6AD82F00C6F7AE /* Check.png in Resources */,
@@ -499,8 +499,8 @@
 				5B29612F0D6AD82100C6F7AE /* ABButtonBarButton.m in Sources */,
 				5B2961300D6AD82100C6F7AE /* ABController.m in Sources */,
 				5B2961310D6AD82100C6F7AE /* ABHelper.m in Sources */,
-				5B2961320D6AD82100C6F7AE /* ABPreferences.m in Sources */,
-				5B2961330D6AD82100C6F7AE /* ABPreferencesModule.m in Sources */,
+				5B2961320D6AD82100C6F7AE /* SABPreferences.m in Sources */,
+				5B2961330D6AD82100C6F7AE /* SABPreferencesModule.m in Sources */,
 				5B2961340D6AD82100C6F7AE /* ABRuleEditorDelegate.m in Sources */,
 				5B2961350D6AD82100C6F7AE /* ABSubscriptionEditorController.m in Sources */,
 				5B2961370D6AD82100C6F7AE /* ABToolbarController.m in Sources */,
