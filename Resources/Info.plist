@@ -30,5 +30,14 @@
 	<string>http://burgersoftware.com/safariadblock/appcast</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
+	<key>SIMBLTargetApplications</key>
+	<dict>
+		<key>MinBundleVersion</key>
+		<string>*</string>
+		<key>MaxBundleVersion</key>
+		<string>*</string>
+		<key>BundleIdentifier</key>
+		<string>com.apple.safari</string>
+	</dict>
 </dict>
 </plist>

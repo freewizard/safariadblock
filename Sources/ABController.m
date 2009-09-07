@@ -32,6 +32,11 @@
 @implementation ABController
 @synthesize filters, customFilters, subscriptions;
 
++ (void)load
+{
+    [ABController sharedController];
+}
+
 + (void)initialize
 {
 	// Force the creation of the singleton
