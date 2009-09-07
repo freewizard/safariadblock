@@ -626,10 +626,8 @@
 		1DEB914008733D840010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				BUNDLE_LOADER = /Applications/Safari.app/Contents/MacOS/Safari;
 				CURRENT_PROJECT_VERSION = "0.4.0 RC3";
 				DSTROOT = "$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).dst";
@@ -649,7 +647,6 @@
 				);
 				PREBINDING = NO;
 				REGEXKIT_SRCPATH = "$(PROJECT_DIR)/../third-party/regexkit/trunk";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
