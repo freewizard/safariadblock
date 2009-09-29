@@ -16,10 +16,10 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import "Safari.h"
+#import <WebKit/WebKit.h>
 
-@interface LoadProgressMonitor (ABBlockWebResourceLoadDelegate)
+@interface NSObject (ABWebResourceLoadDelegate)
 
-+ (BOOL)swizzle;
+- (NSURLRequest *)adblock_webView:(WebView *)sender resource:(id)identifier willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse fromDataSource:(WebDataSource *)dataSource;
 
 @end

@@ -26,12 +26,7 @@
 - (NSString *)src;
 @end
 
-@implementation LocationChangeHandler (ABBlockWebFrameLoadDelegate)
-
-+ (BOOL)swizzle
-{
-	return [self overrideMethods:[NSArray arrayWithObject:@"webView:didFinishLoadForFrame:"]];
-}
+@implementation NSObject (ABLocationChangeHandler)
 
 - (void)adblock_webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {

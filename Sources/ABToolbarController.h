@@ -1,8 +1,9 @@
 #import <Cocoa/Cocoa.h>
 #import "Safari.h"
 
-@interface ToolbarController (ABToolbarController)
+@interface NSObject (ABToolbarController)
 
-+ (BOOL)swizzle;
+- (NSArray *)adblock_toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar;
+- (NSToolbarItem *)adblock_toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag;
 
 @end

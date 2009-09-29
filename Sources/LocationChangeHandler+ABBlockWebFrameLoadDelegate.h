@@ -16,10 +16,10 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import "Safari.h"
+#import <WebKit/WebKit.h>
 
-@interface LocationChangeHandler (ABBlockWebFrameLoadDelegate)
+@interface NSObject (ABLocationChangeHandler)
 
-+ (BOOL)swizzle;
+- (void)adblock_webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame;
 
 @end

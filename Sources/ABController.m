@@ -34,7 +34,7 @@
 
 + (void)load
 {
-    [ABController sharedController];
+  [ABController sharedController];
 }
 
 + (void)initialize
@@ -143,16 +143,29 @@ static ABController *sharedController = nil;
 		[updater setAutomaticallyChecksForUpdates:YES];
 		
 		[NSURLProtocol registerClass:[ABURLProtocol class]];
-		
-		// The magic happens here!
-		[LoadProgressMonitor swizzle];
-		[LocationChangeHandler swizzle];
-		[ToolbarController swizzle];
-		
-		// poseAsClass is depreciated, but... who cares if it works here?
-		[[SABPreferences class] poseAsClass:[NSPreferences class]];
-		
-		
+
+    // The magic happens here!
+
+    // Preferences swizzling
+    ClassMethodSwizzle(NSClassFromString(@"NSPreferences"),
+                       @selector(sharedPreferences),
+                       @selector(sharedPreferencesAdblock));
+
+    //Ad swizzling
+    MethodSwizzle(NSClassFromString(@"LoadProgressMonitor"),
+                  @selector(webView:resource:willSendRequest:redirectResponse:fromDataSource:),
+                  @selector(adblock_webView:resource:willSendRequest:redirectResponse:fromDataSource:));
+    MethodSwizzle(NSClassFromString(@"LocationChangeHandler"),
+                  @selector(webView:didFinishLoadForFrame:),
+                  @selector(adblock_webView:didFinishLoadForFrame:));
+
+    // Toolbar swizzling
+    MethodSwizzle(NSClassFromString(@"ToolbarController"),
+                  @selector(toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:),
+                  @selector(adblock_toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:));
+    MethodSwizzle(NSClassFromString(@"ToolbarController"),
+                  @selector(toolbarAllowedItemIdentifiers:),
+                  @selector(adblock_toolbarAllowedItemIdentifiers:));
 	}
 	return self;
 }

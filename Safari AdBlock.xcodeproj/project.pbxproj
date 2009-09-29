@@ -661,8 +661,6 @@
 				INSTALL_PATH = /Library/InputManagers;
 				OTHER_LDFLAGS = (
 					"-undefined",
-					suppress,
-					"-undefined",
 					dynamic_lookup,
 				);
 				PREBINDING = NO;

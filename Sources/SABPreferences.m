@@ -17,13 +17,12 @@
 
 #import "SABPreferences.h"
 #import "SABPreferencesModule.h"
-#import <WebKit/WebKit.h>
 
-@implementation SABPreferences
+@implementation NSObject (ABPreferences)
 
-+ (id)sharedPreferences {
++ (id)sharedPreferencesAdblock {
 	static BOOL	preferencesAdded = NO;
-	id preferences = [super sharedPreferences];
+	id preferences = [self sharedPreferencesAdblock];
 	
 	if (preferences != nil && !preferencesAdded) {
 		[preferences addPreferenceNamed:@"AdBlock" owner:[SABPreferencesModule sharedInstance]];

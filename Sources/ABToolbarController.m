@@ -3,21 +3,7 @@
 #import "ABHelper.h"
 #import "ABController.h"
 
-@implementation ToolbarController (ABToolbarController)
-
-+ (BOOL)swizzle
-{
-	NSArray *selectors = [NSArray arrayWithObjects:
-						  @"toolbarAllowedItemIdentifiers:", 
-						  @"toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:",
-						  nil];
-	
-	for (NSString *selector in selectors)
-		if (![ToolbarController overrideMethod:selector])
-			return NO;
-			
-	return YES;	
-}
+@implementation NSObject (ABToolbarController)
 
 - (NSArray *)adblock_toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar
 {
@@ -47,7 +33,7 @@
 	[toolbarItem setToolTip:@"Enable/Disable Safari AdBlock"];
 	[toolbarItem setView:button];	
 	
-    return toolbarItem;
+  return toolbarItem;
 }
 
 @end

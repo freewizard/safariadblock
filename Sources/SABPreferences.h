@@ -18,6 +18,9 @@
 #import <Cocoa/Cocoa.h>
 #import "NSPreferences.h"
 
-@interface SABPreferences : NSPreferences {
-}
+@interface NSObject (ABPreferences)
+
++ (id) sharedPreferencesAdblock;
+
 @end
+

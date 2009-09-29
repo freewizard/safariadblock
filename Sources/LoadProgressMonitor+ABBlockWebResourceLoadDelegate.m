@@ -21,12 +21,7 @@
 #import "ABController.h"
 #import "ABHelper.h"
 
-@implementation LoadProgressMonitor (ABBlockWebResourceLoadDelegate)
-
-+ (BOOL)swizzle
-{
-	return [self overrideMethods:[NSArray arrayWithObject:@"webView:resource:willSendRequest:redirectResponse:fromDataSource:"]];
-}
+@implementation NSObject (ABWebResourceLoadDelegate)
 
 - (NSURLRequest *)adblock_webView:(WebView *)sender resource:(id)identifier willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse fromDataSource:(WebDataSource *)dataSource
 {
