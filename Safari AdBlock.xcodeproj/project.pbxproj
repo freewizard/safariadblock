@@ -68,6 +68,7 @@
 		5BF408130E09CD9700134021 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF408120E09CD9700134021 /* Sparkle.framework */; };
 		5BF4083E0E09CDAE00134021 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5BF408120E09CD9700134021 /* Sparkle.framework */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		DEC063FD10724CE100BE7465 /* MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC063FC10724CE100BE7465 /* MethodSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,8 @@
 		5BF9AE400D3B82A100B87DDB /* ABRuleEditorDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABRuleEditorDelegate.m; path = Sources/ABRuleEditorDelegate.m; sourceTree = "<group>"; };
 		5BF9AE410D3B82A100B87DDB /* ABRuleEditorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABRuleEditorDelegate.h; path = Sources/ABRuleEditorDelegate.h; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* LoaderInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LoaderInfo.plist; path = Resources/LoaderInfo.plist; sourceTree = "<group>"; };
+		DEC063FB10724CE100BE7465 /* MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzle.h; sourceTree = "<group>"; };
+		DEC063FC10724CE100BE7465 /* MethodSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +324,8 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DEC063FB10724CE100BE7465 /* MethodSwizzle.h */,
+				DEC063FC10724CE100BE7465 /* MethodSwizzle.m */,
 				5BA3D6540CD1F60800DBD48A /* NSPreferences.h */,
 				5BA3D5550CD1EFA200DBD48A /* Safari.h */,
 				32DBCF630370AF2F00C91783 /* Safari AdBlock_Prefix.pch */,
@@ -525,6 +530,7 @@
 				5B29613B0D6AD82100C6F7AE /* NSArray+ABArray.m in Sources */,
 				5B29613C0D6AD82100C6F7AE /* NSString+ABString.m in Sources */,
 				5B470B6F0E2413EC00EC8565 /* NSBundle+ABBundle.m in Sources */,
+				DEC063FD10724CE100BE7465 /* MethodSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
