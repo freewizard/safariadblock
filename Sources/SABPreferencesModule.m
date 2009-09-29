@@ -28,10 +28,37 @@
 #pragma mark -
 #pragma mark NSPreferencesModule
 
++ (NSImage*) preloadImage: (NSString*) theName
+{
+	NSImage* image = nil;
+	NSString* imagePath = [[NSBundle bundleWithIdentifier: BundleIdentifier]
+						   pathForImageResource: theName];
+	if (!imagePath)
+	{
+		return nil;
+	}
+	image = [[NSImage alloc] initByReferencingFile: imagePath];
+	if (!image)
+	{
+		return nil;
+	}
+	[image setName: theName];
+	return image;
+}
+
 - (NSString *)preferencesNibName {
 	return @"SABPreferences";
 }
- 
+
+- (NSImage*) imageForPreferenceNamed: (NSString*) theName
+{
+	NSImage* image = [NSImage imageNamed: @"SafariAdBlock.icns"];
+	if (image == nil) {
+		image = [SABPreferencesModule preloadImage: @"SafariAdBlock.icns"];
+	}
+	return image;
+}
+
 - (NSView*)viewForPreferenceNamed:(NSString *)aName
 {
 #pragma unused(aName)
@@ -43,6 +70,10 @@
 - (BOOL)isResizable;
 {
 	return NO;
+}
+
+- (NSSize) minSize {
+	return NSMakeSize(514,261);
 }
 
 - (void)willBeDisplayed

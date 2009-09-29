@@ -608,7 +608,8 @@
 		1DEB913F08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				BUNDLE_LOADER = /Applications/Safari.app/Contents/MacOS/Safari;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "0.4.0 RC3";
@@ -621,7 +622,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INSTALL_PATH = /Library/InputManagers;
+				INSTALL_PATH = "/Library/Application Support/SIMBL/Plugins/";
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = (
 					"-undefined",
@@ -652,7 +653,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INSTALL_PATH = /Library/InputManagers;
+				INSTALL_PATH = "/Library/Application Support/SIMBL/Plugins/";
 				OTHER_LDFLAGS = (
 					"-undefined",
 					dynamic_lookup,

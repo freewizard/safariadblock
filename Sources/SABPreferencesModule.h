@@ -47,5 +47,7 @@
 - (IBAction)showURLTester:(id)sender;
 - (IBAction)hideURLTester:(id)sender;
 - (IBAction)testURL:(id)sender;
+- (NSImage *) imageForPreferenceNamed:(NSString *) name;
+- (NSView *) viewForPreferenceNamed:(NSString *) name;
 @end
 
