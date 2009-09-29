@@ -31,13 +31,23 @@
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>SIMBLTargetApplications</key>
-	<dict>
-		<key>MinBundleVersion</key>
-		<string>*</string>
-		<key>MaxBundleVersion</key>
-		<string>*</string>
-		<key>BundleIdentifier</key>
-		<string>com.apple.safari</string>
-	</dict>
+	<array>
+		<dict>
+			<key>BundleIdentifier</key>
+			<string>com.apple.Safari</string>
+			<key>MinBundleVersion</key>
+			<string>5530</string>
+			<key>MaxBundleVersion</key>
+			<string>*</string>
+		</dict>
+		<dict>
+			<key>BundleIdentifier</key>
+			<string>org.webkit.nightly.WebKit</string>
+			<key>MinBundleVersion</key>
+			<string>*</string>
+			<key>MaxBundleVersion</key>
+			<string>*</string>
+		</dict>
+	</array>
 </dict>
 </plist>
