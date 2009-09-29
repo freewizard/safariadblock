@@ -56,8 +56,7 @@
 		5B29616B0D6ADA7800C6F7AE /* RegexKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B35562C0D4F802C00218F4A /* RegexKit.framework */; };
 		5B29616C0D6ADA7800C6F7AE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA3D5F90CD1EFF100DBD48A /* WebKit.framework */; };
 		5B29616D0D6ADA7800C6F7AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
-		5B2998F20DE755B40005CEF3 /* LoadProgressMonitor+ABBlockWebResourceLoadDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2998F10DE755B40005CEF3 /* LoadProgressMonitor+ABBlockWebResourceLoadDelegate.m */; };
-		5B2999700DE75C4B0005CEF3 /* LocationChangeHandler+ABBlockWebFrameLoadDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B29996F0DE75C4B0005CEF3 /* LocationChangeHandler+ABBlockWebFrameLoadDelegate.m */; };
+		5B2998F20DE755B40005CEF3 /* NSObject+Adblock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2998F10DE755B40005CEF3 /* NSObject+Adblock.m */; };
 		5B470B6F0E2413EC00EC8565 /* NSBundle+ABBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B470B6E0E2413EC00EC8565 /* NSBundle+ABBundle.m */; };
 		5B6513090F65199A0043B788 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5B6513070F6519900043B788 /* dsa_pub.pem */; };
 		5BB3A6340D799C7500FF0BC5 /* Safari AdBlock.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5B29616E0D6ADA7800C6F7AE /* Safari AdBlock.bundle */; };
@@ -141,10 +140,8 @@
 		5B2961640D6AD99200C6F7AE /* Safari AdBlock Loader.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Safari AdBlock Loader.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2961660D6AD9B900C6F7AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		5B29616E0D6ADA7800C6F7AE /* Safari AdBlock.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Safari AdBlock.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B2998F00DE755B40005CEF3 /* LoadProgressMonitor+ABBlockWebResourceLoadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LoadProgressMonitor+ABBlockWebResourceLoadDelegate.h"; path = "Sources/LoadProgressMonitor+ABBlockWebResourceLoadDelegate.h"; sourceTree = "<group>"; };
-		5B2998F10DE755B40005CEF3 /* LoadProgressMonitor+ABBlockWebResourceLoadDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LoadProgressMonitor+ABBlockWebResourceLoadDelegate.m"; path = "Sources/LoadProgressMonitor+ABBlockWebResourceLoadDelegate.m"; sourceTree = "<group>"; };
-		5B29996E0DE75C4B0005CEF3 /* LocationChangeHandler+ABBlockWebFrameLoadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LocationChangeHandler+ABBlockWebFrameLoadDelegate.h"; path = "Sources/LocationChangeHandler+ABBlockWebFrameLoadDelegate.h"; sourceTree = "<group>"; };
-		5B29996F0DE75C4B0005CEF3 /* LocationChangeHandler+ABBlockWebFrameLoadDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LocationChangeHandler+ABBlockWebFrameLoadDelegate.m"; path = "Sources/LocationChangeHandler+ABBlockWebFrameLoadDelegate.m"; sourceTree = "<group>"; };
+		5B2998F00DE755B40005CEF3 /* NSObject+Adblock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Adblock.h"; path = "Sources/NSObject+Adblock.h"; sourceTree = "<group>"; };
+		5B2998F10DE755B40005CEF3 /* NSObject+Adblock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Adblock.m"; path = "Sources/NSObject+Adblock.m"; sourceTree = "<group>"; };
 		5B35562C0D4F802C00218F4A /* RegexKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RegexKit.framework; path = "Third-party/RegexKit.framework"; sourceTree = "<group>"; };
 		5B470B6D0E2413EC00EC8565 /* NSBundle+ABBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+ABBundle.h"; path = "Sources/NSBundle+ABBundle.h"; sourceTree = "<group>"; };
 		5B470B6E0E2413EC00EC8565 /* NSBundle+ABBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+ABBundle.m"; path = "Sources/NSBundle+ABBundle.m"; sourceTree = "<group>"; };
@@ -287,10 +284,8 @@
 				5B999A210EDF2596004747E0 /* ABUserDefaultsController.m */,
 				5B01F2E10CD2581B00FA4A3C /* ABValueTransformers.h */,
 				5B01F2E20CD2581B00FA4A3C /* ABValueTransformers.m */,
-				5B2998F00DE755B40005CEF3 /* LoadProgressMonitor+ABBlockWebResourceLoadDelegate.h */,
-				5B2998F10DE755B40005CEF3 /* LoadProgressMonitor+ABBlockWebResourceLoadDelegate.m */,
-				5B29996E0DE75C4B0005CEF3 /* LocationChangeHandler+ABBlockWebFrameLoadDelegate.h */,
-				5B29996F0DE75C4B0005CEF3 /* LocationChangeHandler+ABBlockWebFrameLoadDelegate.m */,
+				5B2998F00DE755B40005CEF3 /* NSObject+Adblock.h */,
+				5B2998F10DE755B40005CEF3 /* NSObject+Adblock.m */,
 				5B287B350D034FCA00FD360A /* NSArray+ABArray.h */,
 				5B287B360D034FCA00FD360A /* NSArray+ABArray.m */,
 				5B470B6D0E2413EC00EC8565 /* NSBundle+ABBundle.h */,
@@ -525,8 +520,7 @@
 				5B2961370D6AD82100C6F7AE /* ABToolbarController.m in Sources */,
 				5B2961380D6AD82100C6F7AE /* ABURLProtocol.m in Sources */,
 				5B2961390D6AD82100C6F7AE /* ABValueTransformers.m in Sources */,
-				5B2998F20DE755B40005CEF3 /* LoadProgressMonitor+ABBlockWebResourceLoadDelegate.m in Sources */,
-				5B2999700DE75C4B0005CEF3 /* LocationChangeHandler+ABBlockWebFrameLoadDelegate.m in Sources */,
+				5B2998F20DE755B40005CEF3 /* NSObject+Adblock.m in Sources */,
 				5B29613B0D6AD82100C6F7AE /* NSArray+ABArray.m in Sources */,
 				5B29613C0D6AD82100C6F7AE /* NSString+ABString.m in Sources */,
 				5B470B6F0E2413EC00EC8565 /* NSBundle+ABBundle.m in Sources */,

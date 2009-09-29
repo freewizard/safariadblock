@@ -25,8 +25,7 @@
 #import "ABHelper.h"
 #import "ABURLProtocol.h"
 #import "ABToolbarController.h"
-#import "LoadProgressMonitor+ABBlockWebResourceLoadDelegate.h"
-#import "LocationChangeHandler+ABBlockWebFrameLoadDelegate.h"
+#import "NSObject+Adblock.h"
 #import <Sparkle/Sparkle.h>
 
 @implementation ABController

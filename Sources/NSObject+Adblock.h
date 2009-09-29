@@ -18,8 +18,9 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
-@interface NSObject (ABLocationChangeHandler)
+@interface NSObject (AdBlock)
 
+- (NSURLRequest *)adblock_webView:(WebView *)sender resource:(id)identifier willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse fromDataSource:(WebDataSource *)dataSource;
 - (void)adblock_webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame;
 
 @end

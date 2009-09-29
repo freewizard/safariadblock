@@ -15,13 +15,18 @@
  along with Safari AdBlock.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "LoadProgressMonitor+ABBlockWebResourceLoadDelegate.h"
+#import "NSObject+Adblock.h"
 #import <RegexKit/RegexKit.h>
 #import "Constants.h"
 #import "ABController.h"
 #import "ABHelper.h"
 
-@implementation NSObject (ABWebResourceLoadDelegate)
+// Fake src definition, because we know DOMHTMLImageElement and DOMHTMLEmbedElement implement it
+@interface DOMElement (ABDOMElement)
+- (NSString *)src;
+@end
+
+@implementation NSObject (Adblock)
 
 - (NSURLRequest *)adblock_webView:(WebView *)sender resource:(id)identifier willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse fromDataSource:(WebDataSource *)dataSource
 {
@@ -58,6 +63,45 @@
 		}
 	}
 	return [self adblock_webView:sender resource:identifier willSendRequest:request redirectResponse:redirectResponse fromDataSource:dataSource];
+}
+
+- (void)adblock_webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
+{
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:IsEnabledPrefsKey] && [[frame DOMDocument] documentElement]) {
+    
+		// If page is not whitelisted
+		if (![[sender mainFrameURL] _isMatchedByAnyRegexInArray:[[[ABController sharedController] filters] objectForKey:PageWhiteListFiltersKey]]) {
+			
+			NSArray *whiteList = [[[ABController sharedController] filters] objectForKey:WhiteListFiltersKey];
+			NSArray *blockList = [[[ABController sharedController] filters] objectForKey:BlockListFiltersKey];
+			NSArray *types = [NSArray arrayWithObjects:@"img", @"embed", @"iframe", nil];
+      
+			for (NSString *type in types) {
+        @try {
+          DOMXPathResult* elements = [[frame DOMDocument] evaluate:[@"//" stringByAppendingString:type]
+                                                       contextNode:[[frame DOMDocument] documentElement]
+                                                          resolver:nil
+                                                              type:DOM_UNORDERED_NODE_SNAPSHOT_TYPE
+                                                          inResult:nil];
+          DOMElement *element = nil;
+          unsigned i, len = elements.snapshotLength;
+          for (i = 0; i < len; ++i) {
+            element = (DOMElement *)[elements snapshotItem:i];
+            if ([element respondsToSelector:@selector(src)]) {
+              NSString *src = [element src];
+              if (![src _isMatchedByAnyRegexInArray:whiteList])
+                if ([src _isMatchedByAnyRegexInArray:blockList])
+                  [element setAttribute:@"style" value:@"visibility: hidden;"];
+            }
+          }
+        }
+        @catch (NSException *e) {
+          NSLog(@"Safari AdBlock: exception %@ in adblock_webView:didFinishLoadForFrame:", e);
+        }
+			}
+		}
+	}
+	[self adblock_webView:sender didFinishLoadForFrame:frame];
 }
 
 @end
