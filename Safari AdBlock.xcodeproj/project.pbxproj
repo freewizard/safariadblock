@@ -371,6 +371,7 @@
 				5B2961610D6AD8F400C6F7AE /* CopyFiles */,
 				5B29610E0D6AD56800C6F7AE /* Sources */,
 				5B29610F0D6AD56800C6F7AE /* Frameworks */,
+				DEC063E610724B7F00BE7465 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -487,6 +488,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/ruby;
 			shellScript = "if ENV[\"ACTION\"] == \"install\" then\n\tfolder = ENV[\"CONFIGURATION_BUILD_DIR\"]\n\tfile = \"Safari AdBlock #{ENV[\"CURRENT_PROJECT_VERSION\"]}.pkg\"\n\tpath = File.join(folder,file)\n\tkey = `openssl dgst -sha1 -binary < \"#{path}\" | openssl dgst -dss1 -sign \"#{File.join(ENV[\"PROJECT_DIR\"],\"..\", \"safariadblock-private\",\"dsa_priv.pem\")}\" | openssl enc -base64`\n\tkey = key.split(\"\\n\").first\n\tFile.open(\"#{ENV[\"CONFIGURATION_BUILD_DIR\"]}/appcast.rb\", \"w\") { |f|\n\t\ttemp = <<END\nRelease.create(\n  :version => \"#{ENV[\"CURRENT_PROJECT_VERSION\"]}\",\n  :signature => \"#{key}\",\n  :url => \"\",\n  :size => #{File.size(path)},\n  :created_at => #{Time.now},\n  :description => %{\n<ul>\n  <li></li>\n  <li></li>\n</ul>\n})\nEND\n\t\tf << temp\n\t}\nend\n\n";
+		};
+		DEC063E610724B7F00BE7465 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=../Frameworks/RegexKit.framework/Versions/A/RegexKit\n/usr/bin/install_name_tool -change \"@executable_path/${PATH}\" \"@loader_path/${PATH}\" \"$TARGET_BUILD_DIR/$TARGET_NAME.$WRAPPER_EXTENSION/Contents/MacOS/$TARGET_NAME\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
