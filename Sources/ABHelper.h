@@ -21,12 +21,6 @@
 - (BOOL)_isMatchedByAnyRegexInArray:(NSArray *)regexArray;
 @end
 
-@interface NSObject (Swizzle)
-+ (BOOL)swizzleMethod:(SEL)old withMethod:(SEL)new;
-+ (BOOL)overrideMethod:(NSString *)methodName;
-+ (BOOL)overrideMethods:(NSArray *)methods;
-@end
-
 @interface ABPaths : NSObject {
 }
 
@@ -37,5 +31,3 @@
 + (NSString *)cacheFilePathForURL:(NSString *)url;
 
 @end
-
-void swizzle(Class originalClass, SEL originalName, Class newClass, SEL newName);
