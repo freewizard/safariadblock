@@ -204,13 +204,16 @@
 			return;
 		[subscriptionNameTextField setObjectValue:[subscriptionBeingEdited objectForKey:SubscriptionNameKey]];
 		[subscriptionURLTextField setObjectValue:[[subscriptionBeingEdited objectForKey:SubscriptionURLsKey] objectAtIndex:0]];
-		[[subscriptionURLTextField delegate] controlTextDidChange:[NSNotification notificationWithName:NSControlTextDidChangeNotification object:subscriptionURLTextField]];
+		[subscriptionURLTextField controlTextDidChange:[NSNotification notificationWithName:NSControlTextDidChangeNotification object:subscriptionURLTextField]];
 	} else {
 		subscriptionBeingEdited = nil;
 		[subscriptionNameTextField setObjectValue:@""];
 		[subscriptionURLTextField setObjectValue:@""];
 	}
-	[[subscriptionURLTextField delegate] reset];
+	//[[subscriptionURLTextField delegate]reset];
+	//is this what it was trying to achieve????
+	[subscriptionURLTextField setStringValue:@""];
+
 	[NSApp beginSheet:subscriptionEditor
 	   modalForWindow:[_preferencesView window]
 		modalDelegate:self
