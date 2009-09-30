@@ -245,7 +245,7 @@ static ABController *sharedController = nil;
 {
 	NSString *customFiltersFilePath = [ABPaths customFiltersFilePath];
 	if ([[NSFileManager defaultManager] fileExistsAtPath:customFiltersFilePath]) {
-		NSArray *flatCustomFilters = [[NSString stringWithContentsOfFile:customFiltersFilePath] componentsSeparatedByString:@"\n"];
+		NSArray *flatCustomFilters = [[NSString stringWithContentsOfFile:customFiltersFilePath encoding:NSUTF8StringEncoding error:nil] componentsSeparatedByString:@"\n"];
 		flatCustomFilters = [flatCustomFilters subarrayWithRange:NSMakeRange(1, [flatCustomFilters count]-1)];
 		NSMutableArray *someCustomFilters = [NSMutableArray array];
 		for (NSString *flatCustomFilter in flatCustomFilters) {

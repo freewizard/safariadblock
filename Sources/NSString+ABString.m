@@ -139,7 +139,7 @@
 	CC_SHA1([data bytes],[data length],digest);
 	for(i=0;i<CC_SHA1_DIGEST_LENGTH;i++) sprintf(finaldigest+i*2,"%02x",digest[i]);
 	
-	return [NSString stringWithCString:finaldigest length:2*CC_SHA1_DIGEST_LENGTH];
+	return [NSString stringWithCString:finaldigest encoding:NSUTF8StringEncoding];
 }
 
 @end
