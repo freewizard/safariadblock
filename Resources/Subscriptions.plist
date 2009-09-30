@@ -12,7 +12,8 @@
 		<key>SubscriptionURLs</key>
 		<array>
 			<string>http://safariadblock.sourceforge.net/list.txt</string>
-			<string>http://easylist.adblockplus.org/easyelement+easylist.txt</string>
+			<string>http://easylist.adblockplus.org/easylist.txt</string>
+			<string>http://easylist.adblockplus.org/easyprivacy.txt</string>
 		</array>
 	</dict>
 	<dict>
