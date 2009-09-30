@@ -73,7 +73,7 @@
 }
 
 - (NSSize) minSize {
-	return NSMakeSize(520,255);
+	return NSMakeSize(601,265);
 }
 
 - (void)willBeDisplayed
