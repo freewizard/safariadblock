@@ -15,7 +15,7 @@
 				5BF407F70E09BA2100134021 /* Make appcast */,
 			);
 			dependencies = (
-				5BB590780E048EE60003807F /* PBXTargetDependency */,
+				4D2CFC691122C4DA00B5F574 /* PBXTargetDependency */,
 			);
 			name = "Safari AdBlock InputManager";
 			productName = "Safari AdBlock InputManager";
@@ -23,7 +23,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		5B2961260D6AD6A300C6F7AE /* SafariAdBlockLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2961250D6AD6A300C6F7AE /* SafariAdBlockLoader.m */; };
 		5B29612E0D6AD82100C6F7AE /* ABButtonBarBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A8F110CE37E6600E0231E /* ABButtonBarBackgroundView.m */; };
 		5B29612F0D6AD82100C6F7AE /* ABButtonBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B699F5F0D2CE6C000E7E2D2 /* ABButtonBarButton.m */; };
 		5B2961300D6AD82100C6F7AE /* ABController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F3560CD2613100FA4A3C /* ABController.m */; };
@@ -59,45 +58,25 @@
 		5B2998F20DE755B40005CEF3 /* NSObject+Adblock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2998F10DE755B40005CEF3 /* NSObject+Adblock.m */; };
 		5B470B6F0E2413EC00EC8565 /* NSBundle+ABBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B470B6E0E2413EC00EC8565 /* NSBundle+ABBundle.m */; };
 		5B6513090F65199A0043B788 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5B6513070F6519900043B788 /* dsa_pub.pem */; };
-		5BB3A6340D799C7500FF0BC5 /* Safari AdBlock.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5B29616E0D6ADA7800C6F7AE /* Safari AdBlock.bundle */; };
 		5BB4EF350DEBE80300CF9941 /* ToolbarOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB4EF340DEBE80300CF9941 /* ToolbarOn.png */; };
 		5BB4EF380DEBE89D00CF9941 /* ToolbarOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB4EF370DEBE89D00CF9941 /* ToolbarOff.png */; };
 		5BE79AB80F6509B9006FDC6D /* SafariAdBlock.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5BE79AB50F650993006FDC6D /* SafariAdBlock.icns */; };
-		5BE79ABA0F6509BD006FDC6D /* SafariAdBlock.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5BE79AB50F650993006FDC6D /* SafariAdBlock.icns */; };
 		5BF408130E09CD9700134021 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF408120E09CD9700134021 /* Sparkle.framework */; };
 		5BF4083E0E09CDAE00134021 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5BF408120E09CD9700134021 /* Sparkle.framework */; };
-		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		DEC063FD10724CE100BE7465 /* MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC063FC10724CE100BE7465 /* MethodSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5B2961620D6AD90F00C6F7AE /* PBXContainerItemProxy */ = {
+		4D2CFC681122C4DA00B5F574 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5B2961100D6AD56800C6F7AE;
+			remoteGlobalIDString = 5B2961100D6AD56800C6F7AE /* Safari AdBlock */;
 			remoteInfo = "Safari AdBlock";
-		};
-		5BB590770E048EE60003807F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
-			remoteInfo = "Safari AdBlock Loader";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5B2961600D6AD8F400C6F7AE /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				5BB3A6340D799C7500FF0BC5 /* Safari AdBlock.bundle in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5B2961610D6AD8F400C6F7AE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +103,6 @@
 		5B01F3560CD2613100FA4A3C /* ABController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABController.m; path = Sources/ABController.m; sourceTree = "<group>"; };
 		5B01F3650CD2649C00FA4A3C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Sources/Constants.h; sourceTree = "<group>"; };
 		5B03DCBD0D4E376F00EAFBCF /* uninstall.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = uninstall.sh; path = Resources/uninstall.sh; sourceTree = "<group>"; };
-		5B1D825D0CDBCF5F0096C72B /* Info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Info; path = Resources/Info; sourceTree = "<group>"; };
 		5B22A2910D47B84000AAA561 /* ABURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABURLProtocol.h; path = Sources/ABURLProtocol.h; sourceTree = "<group>"; };
 		5B22A2920D47B84000AAA561 /* ABURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABURLProtocol.m; path = Sources/ABURLProtocol.m; sourceTree = "<group>"; };
 		5B22A2FB0D47C70300AAA561 /* Cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cross.png; path = Resources/Cross.png; sourceTree = "<group>"; };
@@ -135,9 +113,6 @@
 		5B287B360D034FCA00FD360A /* NSArray+ABArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+ABArray.m"; path = "Sources/NSArray+ABArray.m"; sourceTree = "<group>"; };
 		5B287BC70D0357FF00FD360A /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Credits.rtf; path = Resources/Credits.rtf; sourceTree = "<group>"; };
 		5B287CC80D04BCE600FD360A /* ABButtonBarTest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ABButtonBarTest.xib; path = Resources/ABButtonBarTest.xib; sourceTree = "<group>"; };
-		5B2961240D6AD6A300C6F7AE /* SafariAdBlockLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SafariAdBlockLoader.h; path = Sources/SafariAdBlockLoader.h; sourceTree = "<group>"; };
-		5B2961250D6AD6A300C6F7AE /* SafariAdBlockLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SafariAdBlockLoader.m; path = Sources/SafariAdBlockLoader.m; sourceTree = "<group>"; };
-		5B2961640D6AD99200C6F7AE /* Safari AdBlock Loader.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Safari AdBlock Loader.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2961660D6AD9B900C6F7AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		5B29616E0D6ADA7800C6F7AE /* Safari AdBlock.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Safari AdBlock.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2998F00DE755B40005CEF3 /* NSObject+Adblock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Adblock.h"; path = "Sources/NSObject+Adblock.h"; sourceTree = "<group>"; };
@@ -181,7 +156,6 @@
 		5BF408120E09CD9700134021 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Third-party/Sparkle.framework"; sourceTree = "<group>"; };
 		5BF9AE400D3B82A100B87DDB /* ABRuleEditorDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABRuleEditorDelegate.m; path = Sources/ABRuleEditorDelegate.m; sourceTree = "<group>"; };
 		5BF9AE410D3B82A100B87DDB /* ABRuleEditorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABRuleEditorDelegate.h; path = Sources/ABRuleEditorDelegate.h; sourceTree = "<group>"; };
-		8D5B49B7048680CD000E48DA /* LoaderInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LoaderInfo.plist; path = Resources/LoaderInfo.plist; sourceTree = "<group>"; };
 		DEC063FB10724CE100BE7465 /* MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MethodSwizzle.h; path = Sources/MethodSwizzle.h; sourceTree = "<group>"; };
 		DEC063FC10724CE100BE7465 /* MethodSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MethodSwizzle.m; path = Sources/MethodSwizzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,14 +172,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D5B49B3048680CD000E48DA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -213,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				5B2961230D6AD64C00C6F7AE /* Safari AdBlock */,
-				5B2961220D6AD64000C6F7AE /* Safari AdBlock Loader */,
 				5B2961650D6AD99200C6F7AE /* Products */,
 			);
 			name = "Safari AdBlock";
@@ -329,17 +294,6 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		5B2961220D6AD64000C6F7AE /* Safari AdBlock Loader */ = {
-			isa = PBXGroup;
-			children = (
-				8D5B49B7048680CD000E48DA /* LoaderInfo.plist */,
-				5B1D825D0CDBCF5F0096C72B /* Info */,
-				5B2961240D6AD6A300C6F7AE /* SafariAdBlockLoader.h */,
-				5B2961250D6AD6A300C6F7AE /* SafariAdBlockLoader.m */,
-			);
-			name = "Safari AdBlock Loader";
-			sourceTree = "<group>";
-		};
 		5B2961230D6AD64C00C6F7AE /* Safari AdBlock */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,7 +308,6 @@
 		5B2961650D6AD99200C6F7AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B2961640D6AD99200C6F7AE /* Safari AdBlock Loader.bundle */,
 				5B29616E0D6ADA7800C6F7AE /* Safari AdBlock.bundle */,
 			);
 			name = Products;
@@ -382,26 +335,6 @@
 			productReference = 5B29616E0D6ADA7800C6F7AE /* Safari AdBlock.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		8D5B49AC048680CD000E48DA /* Safari AdBlock Loader */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Safari AdBlock Loader" */;
-			buildPhases = (
-				8D5B49AF048680CD000E48DA /* Resources */,
-				8D5B49B1048680CD000E48DA /* Sources */,
-				8D5B49B3048680CD000E48DA /* Frameworks */,
-				5B2961600D6AD8F400C6F7AE /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5B2961630D6AD90F00C6F7AE /* PBXTargetDependency */,
-			);
-			name = "Safari AdBlock Loader";
-			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = "Safari AdBlock";
-			productReference = 5B2961640D6AD99200C6F7AE /* Safari AdBlock Loader.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -416,7 +349,6 @@
 			projectRoot = "";
 			targets = (
 				5BB590730E048EAF0003807F /* Safari AdBlock InputManager */,
-				8D5B49AC048680CD000E48DA /* Safari AdBlock Loader */,
 				5B2961100D6AD56800C6F7AE /* Safari AdBlock */,
 			);
 		};
@@ -449,15 +381,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D5B49AF048680CD000E48DA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			comments = "Build and copy Safari AdBlock";
-			files = (
-				5BE79ABA0F6509BD006FDC6D /* SafariAdBlock.icns in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -473,7 +396,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "cp \"$PROJECT_DIR/Resources/Info\" \"$DSTROOT/Library/InputManagers/Safari AdBlock/Info\"\n\nif [ \"$ACTION\" = \"install\" ]; then\n\n\tfind \"$DSTROOT\" -name \".DS_Store\" -exec rm -f {} \\;\n\n\tchown -R root:admin \"$DSTROOT/Library\"\n\tchmod 1775 \"$DSTROOT/Library\"\n\tchmod -R 0755 \"$DSTROOT/Library/InputManagers\"\n\n\tPKG=\"$CONFIGURATION_BUILD_DIR/Safari AdBlock $CURRENT_PROJECT_VERSION.pkg\"\n\tpackagemaker \\\n\t\t--root \"$DSTROOT\"\\\n\t \t--id \"net.sourceforge.SafariAdBlock\"\\\n\t\t--version \"$CURRENT_PROJECT_VERSION\"\\\n\t\t--target 10.5\\\n\t\t--no-recommend\\\n\t\t--title \"Safari AdBlock\"\\\n\t\t--out \"$PKG\"\n\n\t# DMGs are so 1990s\n\t# rm -f \"$CONFIGURATION_BUILD_DIR/Safari_AdBlock_$CURRENT_PROJECT_VERSION.dmg\"\n\t# cp \"$PROJECT_DIR/Installer/Safari AdBlock.dmg\" \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.temp.dmg\"\n\t# hdiutil attach \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.temp.dmg\"\n\t# cp \"$PKG\" \"/Volumes/Safari AdBlock/Install Safari AdBlock.pkg\"\n\t# rm -f \"$CONFIGURATION_BUILD_DIR/Install Safari AdBlock.pkg\"\n\t# hdiutil detach \"/Volumes/Safari AdBlock\"\n\t# hdiutil resize -sectors min \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.temp.dmg\"\n\t# hdiutil convert \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.temp.dmg\" -format UDBZ -o \"$CONFIGURATION_BUILD_DIR/Safari_AdBlock_$CURRENT_PROJECT_VERSION.dmg\"\n\t# rm -f \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.temp.dmg\"\n\nfi";
+			shellScript = "INSTALL_LOCATION=\"/Library/Application Support/SIMBL/Plugins\"\n\nif [ \"$ACTION\" = \"install\" ]; then\n\tmkdir -p \"$DSTROOT$INSTALL_LOCATION\"\n\tcp -R \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.bundle\" \"$DSTROOT$INSTALL_LOCATION\"\n\t\n\tfind \"$DSTROOT\" -name \".DS_Store\" -exec rm -f {} \\;\n\n\tchown -R root:admin \"$DSTROOT/Library\"\n\tchmod 1775 \"$DSTROOT/Library\"\n\n\tPKG=\"$CONFIGURATION_BUILD_DIR/Safari AdBlock $CURRENT_PROJECT_VERSION.pkg\"\n\tpackagemaker \\\n\t\t--root \"$DSTROOT\"\\\n\t \t--id \"net.sourceforge.SafariAdBlock\"\\\n\t\t--version \"$CURRENT_PROJECT_VERSION\"\\\n\t\t--target 10.5\\\n\t\t--no-recommend\\\n\t\t--title \"Safari AdBlock\"\\\n\t\t--out \"$PKG\"\n\n\t# DMGs are so 1990s\n\t# rm -f \"$CONFIGURATION_BUILD_DIR/Safari_AdBlock_$CURRENT_PROJECT_VERSION.dmg\"\n\t# cp \"$PROJECT_DIR/Installer/Safari AdBlock.dmg\" \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.temp.dmg\"\n\t# hdiutil attach \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.temp.dmg\"\n\t# cp \"$PKG\" \"/Volumes/Safari AdBlock/Install Safari AdBlock.pkg\"\n\t# rm -f \"$CONFIGURATION_BUILD_DIR/Install Safari AdBlock.pkg\"\n\t# hdiutil detach \"/Volumes/Safari AdBlock\"\n\t# hdiutil resize -sectors min \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.temp.dmg\"\n\t# hdiutil convert \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.temp.dmg\" -format UDBZ -o \"$CONFIGURATION_BUILD_DIR/Safari_AdBlock_$CURRENT_PROJECT_VERSION.dmg\"\n\t# rm -f \"$CONFIGURATION_BUILD_DIR/Safari AdBlock.temp.dmg\"\n\nfi";
 		};
 		5BF407F70E09BA2100134021 /* Make appcast */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -528,26 +451,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D5B49B1048680CD000E48DA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5B2961260D6AD6A300C6F7AE /* SafariAdBlockLoader.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5B2961630D6AD90F00C6F7AE /* PBXTargetDependency */ = {
+		4D2CFC691122C4DA00B5F574 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5B2961100D6AD56800C6F7AE /* Safari AdBlock */;
-			targetProxy = 5B2961620D6AD90F00C6F7AE /* PBXContainerItemProxy */;
-		};
-		5BB590780E048EE60003807F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8D5B49AC048680CD000E48DA /* Safari AdBlock Loader */;
-			targetProxy = 5BB590770E048EE60003807F /* PBXContainerItemProxy */;
+			targetProxy = 4D2CFC681122C4DA00B5F574 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -563,48 +473,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1DEB913B08733D840010E9CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = "$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).dst";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_ENABLE_OBJC_GC = supported;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sources/Safari AdBlock_Prefix.pch";
-				INFOPLIST_FILE = Resources/LoaderInfo.plist;
-				INSTALL_PATH = "/Library/InputManagers/Safari AdBlock";
-				PRODUCT_NAME = "Safari AdBlock Loader";
-				ZERO_LINK = YES;
-			};
-			name = Debug;
-		};
-		1DEB913C08733D840010E9CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DSTROOT = "$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).dst";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_ENABLE_OBJC_GC = supported;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sources/Safari AdBlock_Prefix.pch";
-				INFOPLIST_FILE = Resources/LoaderInfo.plist;
-				INSTALL_PATH = "/Library/InputManagers/Safari AdBlock";
-				PRODUCT_NAME = "Safari AdBlock Loader";
-			};
-			name = Release;
-		};
 		1DEB913F08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -722,15 +590,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Safari AdBlock Loader" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DEB913B08733D840010E9CD /* Debug */,
-				1DEB913C08733D840010E9CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "Safari AdBlock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
