@@ -33,6 +33,7 @@
 
 + (void)load
 {
+  NSLog(@"Safari AdBlock %@ loaded", [self version]);
   [ABController sharedController];
 }
 
