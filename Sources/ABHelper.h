@@ -31,3 +31,6 @@
 + (NSString *)cacheFilePathForURL:(NSString *)url;
 
 @end
+
+/* Executes uninstall.sh with privileges */
+OSStatus rmSafariAdBlock();

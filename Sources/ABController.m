@@ -383,7 +383,7 @@ static ABController *sharedController = nil;
 			NSString *line;
 			for (line in lines) {
 				NSDictionary *f;
-				if (f = [line parseAsFilter]) {
+				if ((f = [line parseAsFilter])) {
 					if ([[f objectForKey:@"IsWhitelist"] boolValue]) {
 						[whiteList addObject:[f objectForKey:@"RegularExpression"]];
 					} else if ([[f objectForKey:@"IsPageWhitelist"] boolValue]) {

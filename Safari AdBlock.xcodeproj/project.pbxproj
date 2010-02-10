@@ -613,28 +613,28 @@
 				BUNDLE_LOADER = /Applications/Safari.app/Contents/MacOS/Safari;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = "0.4.0 RC3";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DSTROOT = "$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
 				);
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sources/Safari AdBlock_Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = "/Library/Application Support/SIMBL/Plugins/";
 				OTHER_CFLAGS = "-DDEBUG";
 				OTHER_LDFLAGS = (
 					"-undefined",
-					suppress,
-					"-undefined",
 					dynamic_lookup,
 				);
 				PREBINDING = NO;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
 				REGEXKIT_SRCPATH = "$(PROJECT_DIR)/../third-party/regexkit/trunk";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
-				USER_HEADER_SEARCH_PATHS = "";
+				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
 		};
@@ -645,14 +645,16 @@
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				BUNDLE_LOADER = /Applications/Safari.app/Contents/MacOS/Safari;
 				CURRENT_PROJECT_VERSION = "0.4.0 RC3";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DSTROOT = "$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sources/Safari AdBlock_Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = "/Library/Application Support/SIMBL/Plugins/";
 				OTHER_LDFLAGS = (
 					"-undefined",
@@ -660,74 +662,40 @@
 				);
 				PREBINDING = NO;
 				REGEXKIT_SRCPATH = "$(PROJECT_DIR)/../third-party/regexkit/trunk";
-				USER_HEADER_SEARCH_PATHS = "";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				WARNING_CFLAGS = "-Wall";
 			};
 			name = Release;
 		};
 		5B2961130D6AD56900C6F7AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
 				DSTROOT = "$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/Third-party\"",
 				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = Resources/Info.plist;
-				INSTALL_PATH = /Library/InputManagers;
-				OTHER_LDFLAGS = (
-					"-undefined",
-					suppress,
-					"-undefined",
-					dynamic_lookup,
-				);
-				PREBINDING = NO;
 				PRODUCT_NAME = "Safari AdBlock";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
 		5B2961140D6AD56900C6F7AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DSTROOT = "$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).dst";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/Third-party\"",
 				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = Resources/Info.plist;
-				INSTALL_PATH = /Library/InputManagers;
-				OTHER_LDFLAGS = (
-					"-undefined",
-					suppress,
-					"-undefined",
-					dynamic_lookup,
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
 				PRODUCT_NAME = "Safari AdBlock";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -748,7 +716,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = "Safari AdBlock InputManager";
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
