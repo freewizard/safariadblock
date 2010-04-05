@@ -101,9 +101,10 @@ static ABController *sharedController = nil;
 {	
 	self = [super init];
 	if (self != nil) {
-				
+		BOOL isOmniWeb = [[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"com.omnigroup.OmniWeb5"];
 		// Safari?
 		if (!([[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"com.apple.Safari"] ||
+			  isOmniWeb ||
 			  [[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"org.webkit.nightly.WebKit"]
 			  ))
 			return nil;
@@ -144,29 +145,34 @@ static ABController *sharedController = nil;
 		
 		[NSURLProtocol registerClass:[ABURLProtocol class]];
 
-    // The magic happens here!
-
-    // Preferences swizzling
-    ClassMethodSwizzle(NSClassFromString(@"NSPreferences"),
+		// The magic happens here!
+		if (isOmniWeb) {
+			MethodSwizzle(NSClassFromString(@"OWAddress"),
+						  @selector(isFiltered),
+						  @selector(adblock_isFiltered));
+		} else {
+			// Preferences swizzling
+			ClassMethodSwizzle(NSClassFromString(@"NSPreferences"),
                        @selector(sharedPreferences),
                        @selector(sharedPreferencesAdblock));
 
-    //Ad swizzling
-    MethodSwizzle(NSClassFromString(@"LoadProgressMonitor"),
+			//Ad swizzling
+			MethodSwizzle(NSClassFromString(@"LoadProgressMonitor"),
                   @selector(webView:resource:willSendRequest:redirectResponse:fromDataSource:),
                   @selector(adblock_webView:resource:willSendRequest:redirectResponse:fromDataSource:));
-    MethodSwizzle(NSClassFromString(@"LocationChangeHandler"),
+			MethodSwizzle(NSClassFromString(@"LocationChangeHandler"),
                   @selector(webView:didFinishLoadForFrame:),
                   @selector(adblock_webView:didFinishLoadForFrame:));
 
-    // Toolbar swizzling
-    MethodSwizzle(NSClassFromString(@"ToolbarController"),
+			// Toolbar swizzling
+			MethodSwizzle(NSClassFromString(@"ToolbarController"),
                   @selector(toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:),
                   @selector(adblock_toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:));
-    MethodSwizzle(NSClassFromString(@"ToolbarController"),
+			MethodSwizzle(NSClassFromString(@"ToolbarController"),
                   @selector(toolbarAllowedItemIdentifiers:),
                   @selector(adblock_toolbarAllowedItemIdentifiers:));
-	}
+		}
+	}	
 	return self;
 }
 

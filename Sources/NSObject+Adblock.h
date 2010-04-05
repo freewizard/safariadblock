@@ -22,5 +22,5 @@
 
 - (NSURLRequest *)adblock_webView:(WebView *)sender resource:(id)identifier willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse fromDataSource:(WebDataSource *)dataSource;
 - (void)adblock_webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame;
-
+- (BOOL) adblock_isFiltered;
 @end

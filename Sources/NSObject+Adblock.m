@@ -104,4 +104,12 @@
 	[self adblock_webView:sender didFinishLoadForFrame:frame];
 }
 
+- (BOOL)adblock_isFiltered
+{
+	if ([[self NSURL] _isMatchedByAnyRegexInArray:[[[ABController sharedController] filters] objectForKey:BlockListFiltersKey]]) {
+		return true;
+	}
+	return [self adblock_isFiltered];
+}
+
 @end
