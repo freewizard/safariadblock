@@ -109,7 +109,7 @@
 		<string>zh</string>
 		<key>SubscriptionURLs</key>
 		<array>
-			<string>http://www.anetcity.com/adblock.txt</string>
+			<string>http://adblock-chinalist.googlecode.com/svn/trunk/adblock.txt</string>
 		</array>
 	</dict>
 </array>
